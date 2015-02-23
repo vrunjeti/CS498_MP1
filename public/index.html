@@ -2,14 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MP1 Starter</title>
+  <title>Date-a-Face</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Varun.</div>
 
+	<header>
+		<nav class="row">
+			<img src="img/logo.png">
+			<ul>
+				<li><a href="#banner" id="nav-home" class="active">Home</a></li>
+				<li><a href="#about" id="nav-about">About</a></li>
+				<li><a href="#team" id="nav-team">Team</a></li>
+				<li><a href="#contact" id="nav-contact">Contact</a></li>			
+			</ul>
+		</nav>
+	</header>
+
+  	<section id="banner">
+  		<div class="video-container">
+  			<video autoplay="autoplay" muted="muted">
+	  			<source src="img/video2.mp4" type="video/mp4"></source>
+	  		</video>
+	  		<div class="row h-align overvid">
+	  			<h1>Date-a-Face</h1>
+	  			<h3>The best CS 411 Group</h3>
+	  		</div>
+  		</div>
+  	</section>
+
+  	<section id="about">
+  		<div class="row">
+  			<h2>About</h2>
+  			<p>Veggies es bonus vobis, roinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+			Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini. <br> <br>
+
+			Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+  		</div>
+  	</section>
+
+  	<section id="carousel">
+  	   <div id="slideshow">
+          <div id="slideshow-reel">
+              <div class="slide" id="s1"></div>
+              <div class="slide" id="s2"></div>
+              <div class="slide" id="s3"></div>              
+              <div class="slide" id="s4"></div>              
+              <div class="slide" id="s5"></div>
+          </div>
+          <a href="#" id="slideshow-prev"></a>
+          <a href="#" id="slideshow-next"></a>
+        </div>
+        
+  	</section>
+
+  	<section id="team">
+  			<div class="row">
+  				<h2>Meet the Team</h2>
+  				<div class="row">
+  					<div class="col half">
+		  				<img src="img/arpit.jpg" class="h-align">
+		  				<h4>Arpit Khanuja</h4>
+		  			</div>
+		  			<div class="col half">
+		  				<img src="img/varun.jpg" class="h-align">
+		  				<h4>Varun Munjeti</h4>
+		  			</div>
+  				</div>
+  				<div class="row">
+  					<div class="col half">
+		  				<img src="img/andy.jpg" class="h-align">
+		  				<h4>Andy Vuong</h4>
+		  			</div>
+		  			<div class="col half">
+		  				<img src="img/michelle.jpg" class="h-align">
+		  				<h4>Michelle Zheng</h4>
+		  			</div>
+  				</div> 
+	  		</div>
+  	</section>
+
+  	<section>
+	    <div id="fixedpic"></div>
+	</section>
+
+  	<section id="contact">
+  		<div class="row">
+  			<h2>Contact Us</h2>
+  			<div class="col half">
+  				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.2782127704772!2d-88.22490499999995!3d40.113803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd76baa8479a9%3A0x4e9f01d40d359630!2sThomas+M.+Siebel+Center+for+Computer+Science!5e0!3m2!1sen!2sus!4v1424148080011" width="400" height="400" frameborder="0" style="border:0"></iframe>
+  			</div>
+  			<div class="col half contact-form">
+          <div class="contact-block" id="openmodal">
+              <div class="row" id="fb">
+                  <i class="fa fa-facebook-official fa-5x"></i>
+                  <h6 class="v-align">Connect on Facebook</h6>
+              </div>
+              <div class="row">
+                  <i class="fa fa-envelope fa-5x"></i>
+                  <h6 class="v-align">Send us an email</h6>
+              </div>
+          </div>
+          <!-- For some reason I need this to space the above block correctly -->
+          <h5>&nbsp;</h5>
+        </div>
+  		</div>
+  	</section>
+
+  	<footer>
+  		<h6 class="v-align">Date-a-Face</h6>
+  	</footer>
+
+  	<div id="overlay" class="hide"></div>
+	  <div id="modal" class="hide h-align">
+	    <div id="content">
+		    <h4>Sorry!</h4>
+		    <div>
+		    	<h6>
+			    	We don't actually have an email or Facebook page. 
+			    </h6>
+		    </div>
+		    
+		    <div><a id="close"><h6>Close</h6></a></div>
+	    </div>
+	 </div>
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>
